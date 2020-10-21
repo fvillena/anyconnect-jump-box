@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  vpn:
+    container_name: uchile-jump-box
+    image: anyconnect-jump-box
+    environment:
+      - ANYCONNECT_SERVER=
+      - ANYCONNECT_USER=
+      - ANYCONNECT_PASSWORD=
+      - PUBLIC_KEY=
+    expose:
+      - "22"
+    ports:
+      - "22"
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
