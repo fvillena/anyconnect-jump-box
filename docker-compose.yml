@@ -2,7 +2,7 @@ version: '3'
 
 services:
   vpn:
-    container_name: uchile-jump-box
+    container_name: jump-box
     image: anyconnect-jump-box
     environment:
       - ANYCONNECT_SERVER=

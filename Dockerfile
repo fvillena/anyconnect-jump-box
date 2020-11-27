@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt update
-RUN apt install openconnect ssh openssh-server sshpass net-tools -y
+RUN apt install openconnect ssh openssh-server sshpass net-tools iproute2 iputils-ping -y
 RUN mkdir /var/run/sshd
 RUN mkdir -p ~/.ssh && chmod 700 ~/.ssh
 RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
